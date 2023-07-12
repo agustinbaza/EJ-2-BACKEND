@@ -12,7 +12,10 @@ import validarColor from "../helpers/validarColor";
 const router = Router();
 
 router.route("/prueba").get(controladorPrueba);
-router.route("/colores").post(validarColor, crearColor).get(obtenerListaColores);
+router
+  .route("/colores")
+  .post(validarColor, crearColor)
+  .get(obtenerListaColores);
 router
   .route("/colores/:id")
   .get(obtenerColor)
